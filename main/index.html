@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS농장</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../image/농부.png" width="50" height="50">MS농장</a>
+        <ul class="navbar"> 
+            <li><a href="#home">홈</a></li>
+            <li><a href="#categories">카테고리</a></li>
+            <li><a href="#products">전체상품</a></li>
+            <li><a href="#about">회사정보</a></li>
+        </ul>
+        <div class="profile">
+            <img src ="../image/내정보.png" class= "user-pic" onclick="toggleMenu()">
+            <span>김두식</span>
+            <i class="fi fi-rr-angle-small-down" onclick="toggleMenu()"></i>
+        </div>
+        <div class="navbar-right">
+            <a href="../main/singin.html">로그인</a>
+            <a href="../main/singup.html">회원가입</a>  
+        </div>
+
+         <!-- 내 정보  -->
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="../image/내정보.png">
+                    <h3>김두식</h3>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <img src="../image/유저.png">
+                    <p>프로필</p>
+                    <span i class="fi fi-rr-arrow-right"></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="../image/설정.png">
+                    <p>설정</p>
+                    <span i class="fi fi-rr-arrow-right"></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="../image/안내.png">
+                    <p>문의하기</p>
+                    <span i class="fi fi-rr-arrow-right"></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="../image/로그아웃.png">
+                    <p>로그아웃</p>
+                    <span i class="fi fi-rr-arrow-right"></span>
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- 홈 -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+
+            <!-- 슬라이드 1 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>샐러드</span>
+                    <h1>무화과 <br>샐러드 <br>한정판매</h1>
+                    <a href="#" class="btn">바로가기<i class="fi fi-rr-arrow-right"></i></a>
+                </div>
+                <img src="../image/무화과 샐러드.jpg" alt="">
+            </div>
+
+            <!-- 슬라이드 2 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>채소</span>
+                    <h1>감자 <br>25% <br>한정세일</h1>
+                    <a href="#" class="btn">바로가기<i class="fi fi-rr-arrow-right"></i></a>
+                </div>
+                <img src="../image/감자.png" alt="">
+            </div>
+
+            <!-- 슬라이드 3 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>채소</span>
+                    <h1>신선한 <br>배추 <br>할인행사</h1>
+                    <a href="#" class="btn">바로가기<i class="fi fi-rr-arrow-right"></i></a>
+                </div>
+                <img src="../image/배추.png" alt="">
+            </div>
+        </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+    </section>
+
+    <!-- 검색창 -->
+    <div class="search-bar-container">
+        <img class="search-image" src="../image/검색창 장식.png">
+        <div class="search-bar">
+            <input type="text" placeholder="검색어를 입력해 주세요.">
+            <img src="../image/검색바.png" width="10%" height="10%">
+            <div class="popular-search">
+                <p>인기 검색어</p>
+                <a href="#">쌀</a>
+                <a href="#">고구마</a>
+                <a href="#">배추</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 카테고리 -->
+    <section class="categories" id="categories">
+        <div class="heading">
+            <h1>신선식품 <br><span>카테고리</span></h1>
+                <a href="#" class="btn">전체상품<i class="fi fi-rr-arrow-right"></i></a>
+        </div>
+
+        <!-- 세부 목록 -->
+        <div class="categories-conatiner">
+            <!-- 박스 1 -->
+            <div class="box box1">
+                <img src="../image/사과.jpg" alt="">
+                <h2>과일</h2>
+                <span>13개의 상품</span>
+                <i class="fi fi-rr-arrow-right"></i>
+            </div>
+            <!-- 박스 2 -->
+            <div class="box box2">
+                <img src="../image/채소.jpg" alt="">
+                <h2>채소</h2>
+                <span>13개의 상품</span>
+                <i class="fi fi-rr-arrow-right"></i>
+            </div>
+            <!-- 박스 3 -->
+            <div class="box box3">
+                <img src="../image/생선.jpg" alt="">
+                <h2>수산물</h2>
+                <span>13개의 상품</span>
+                <i class="fi fi-rr-arrow-right"></i>
+            </div>
+            <!-- 박스 4 -->
+            <div class="box box4">
+                <img src="../image/소고기.jpg" alt="">
+                <h2>축산물</h2>
+                <span>13개의 상품</span>
+                <i class="fi fi-rr-arrow-right"></i>
+            </div>                    
+        </div>    
+    </section>
+
+    <!-- 전체상품 -->
+    <section class="products" id="products">
+        <div class="heading">
+            <h1>채소 <br><span>인기상품</span></h1>
+            <a href="#" class="btn">바로가기<i class="fi fi-rr-arrow-right"></i></a>
+        </div>
+        <!-- 전체상품 목록 -->
+        <div class="products-conatiner">
+            <!-- 박스 1 -->
+            <div class="box">
+                <a href="청양고추_상세정보.html">
+                    <img src="../image/청양고추.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div>
+            <!-- 박스 2 -->
+            <div class="box">
+                <a href="가지_상세정보.html">
+                    <img src="../image/가지.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div> 
+            <!-- 박스 3 -->
+            <div class="box">
+                <a href="당근_상세정보.html">
+                    <img src="../image/당근.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div> 
+            <!-- 박스 4 -->
+            <div class="box">
+                <a href="마늘_상세정보.html">
+                    <img src="../image/마늘.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div> 
+            <!-- 박스 5 -->
+            <div class="box">
+                <a href="브로콜리_상세정보.html">
+                    <img src="../image/브로콜리.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div> 
+            <!-- 박스 6 -->
+            <div class="box">
+                <a href="미나리_상세정보.html">
+                    <img src="../image/미나리.png" alt="">
+                    <span>신선식품</span>
+                    <h2>Farm fresh organic <br>fruits 250g</h2>
+                    <h3 class="price">13,000원 <span>/kg</span></h3>
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <i class="fi fi-rr-heart"></i>
+                    <span class="discount">-25%</span>
+                </a>
+            </div>  
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <img src="../image/팀소개.png" width="65%" height="65%" alt="">
+        <div class="about-text">
+            <span>저희 MS농장은요..</span>
+            <p>첫째, MS농장은 전자상거래 예약을 도와드립니다.<br>
+               또한 전자상거래의 가격, 출고날짜, 최저가 등을 비교하여 최적의 선택을 도와드립니다.</p>
+            <p>둘째, 직거래 예약을 지원합니다. MS농장의 직거래 서비스를 통해<br>
+               다양한 농수산물의 가격, 신선함 등을 비교하고 구매할 수 있습니다.</p>
+            <p>셋째, 정기적인 세일을 진행합니다. 고객님들은 합리적인 가격으로 농수산물을 선택함으로써<br>
+               신선한 제품을 직접 구매할 수 있으며, 농수산물 구입 비용을 절약할 수 있습니다.</p>
+            <a href="#" class="btn">더 알아보기<i class="fi fi-rr-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- 고객 --> 
+    <section class="customers" id="customers">
+        <h2>이달의 리뷰왕</h2>
+        <!-- 고객 리뷰 -->
+        <div class="customers-container">
+            <!-- 리뷰 1 -->
+            <div class="box">
+                <i class="fi fi-rr-quote-right"></i>
+                <div class="stars">
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                </div>
+                <p>신선해요</p>
+                <div class="review-profile">
+                    <img src="../image/고객1.png" alt="">
+                    <h3>김개똥</h3>
+                </div>
+            </div>
+            <!-- 리뷰 2 -->
+            <div class="box">
+                <i class="fi fi-rr-quote-right"></i>
+                <div class="stars">
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                </div>
+                <p>맛있어요</p>
+                <div class="review-profile">
+                    <img src="../image/고객2.png" alt="">
+                    <h3>김개똥</h3>
+                </div>
+            </div>
+            <!-- 리뷰 3 -->
+            <div class="box">
+                <i class="fi fi-rr-quote-right"></i>
+                <div class="stars">
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                    <i class="fi fi-rr-star"></i>
+                </div>
+                <p>가격이 합리적이예요</p>
+                <div class="review-profile">
+                    <img src="../image/고객3.png" alt="">
+                    <h3>김개똥</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo">MS농장</a>
+            <P>경남정보대학교</P>
+            <div class="social">
+                <img src="../image/페이스북.png" alt="">
+                <img src="../image/트위터.png" alt="">
+                <img src="../image/인스타그램.png" alt="">
+                <img src="../image/유튜브.png" alt="">
+            </div>
+        </div>
+        <div class="footer-box">
+            <h2>카테고리</h2>
+            <a href="#">과일</a>
+            <a href="#">채소</a>
+            <a href="#">수산물</a>
+            <a href="#">축산물</a>
+        </div>
+        <div class="footer-box">
+            <h2>무엇을 도와드릴까요?</h2>
+            <p>상품/배송/기타 서비스와 관련한 빠른 상담을 원하신다면 지금 바로 문의하세요.</p>
+            <form action="">
+                <i class="fi fi-rr-comment"></i>
+                <input type="text" name="" id="" placeholder="">
+                <i class="fi fi-rr-arrow-small-right"></i>
+            </form>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>Copyright © MS농장. All Rights Reserved.</p>
+    </div>
+     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../js/main.js"></script>
+
+    <script>
+        // 기존 서브메뉴 토글
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() { 
+            subMenu.classList.toggle("open-menu");
+        };
+
+    </script>
+    
+</body>
+</html>
