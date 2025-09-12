@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+MS-FARM-WEBSITE
 
-## Getting Started
+Next.js 13 App Router 기반으로 구현한 쇼핑몰 프론트엔드 프로젝트입니다.
+관리자 페이지와 일반 사용자 페이지를 포함하며, 상품 관리, 주문, 회원 관리 등의 다양한 기능을 제공합니다.
 
-First, run the development server:
+---
 
-```bash
+✨ 프로젝트 소개
+
+MS-FARM-WEBSITE는 최신 React 생태계인 Next.js 13 App Router를 활용하여 개발한 쇼핑몰 프론트엔드입니다.
+관리자용 대시보드와 고객용 마켓 페이지를 분리하여 관리하며, 상품 목록, 상세 조회, 장바구니, 주문 내역, 회원가입/로그인 등의 핵심 기능들을 제공합니다.
+전역 레이아웃과 컴포넌트 재사용에 중점을 두었고, Google Geist 폰트를 적용하여 깔끔하고 현대적인 UI를 구성했습니다.
+
+---
+
+🧩 주요 기능
+
+- 🛒 상품 리스트 조회 및 상세 페이지
+
+- ✏️ 관리자 페이지에서 상품 추가, 수정, 삭제 기능
+
+- 🛍 장바구니 페이지 및 주문 내역 확인
+
+- 🔐 회원가입, 로그인, 마이페이지 프로필 관리
+
+- 📦 주문 관리, 고객 관리, 분석 대시보드(관리자 전용)
+
+- 🌐 Google Geist 폰트를 적용한 글로벌 스타일
+
+- 📱 반응형 UI 지원
+
+---
+
+🛠 기술 스택
+
+| 기술                          | 설명                          |
+| --------------------------- | --------------------------- |
+| **Next.js 13 (App Router)** | 최신 React 기반 SSR 및 파일 기반 라우팅 |
+| **React**                   | UI 컴포넌트 구성 및 상태 관리          |
+| **TypeScript**              | 정적 타입 검사 및 코드 안정성 강화        |
+| **CSS (globals.css)**       | 전역 스타일 관리                   |
+| **Google Geist Fonts**      | 모던하고 깔끔한 웹폰트 적용             |
+
+---
+
+📁 프로젝트 구조
+
+src/
+ ├─ app/                # 페이지 및 레이아웃
+ │  ├─ admin/           # 관리자 페이지 (분석, 주문, 고객, 상품 관리)
+ │  ├─ cart/            # 장바구니 페이지
+ │  ├─ categories/      # 카테고리별 상품 페이지
+ │  ├─ contact/         # 문의 페이지
+ │  ├─ login/           # 로그인 페이지
+ │  ├─ mypage/          # 마이페이지 (주문 내역, 프로필)
+ │  ├─ news/            # 공지사항 및 뉴스 페이지
+ │  ├─ products/        # 상품 리스트 및 상세 조회, 상품 추가/수정 페이지
+ │  ├─ search/          # 상품 검색 페이지
+ │  ├─ signup/          # 회원가입 페이지
+ │  ├─ layout.tsx       # 글로벌 레이아웃 및 폰트 설정
+ │  └─ page.tsx         # 홈 페이지
+ ├─ components/         # 공통 UI 컴포넌트 (Header, Footer, Hero, ProductGrid 등)
+ ├─ middleware.ts       # 미들웨어 (인증 등)
+ ├─ public/             # 정적 파일 (이미지, 아이콘 등)
+ ├─ package.json        # 프로젝트 의존성 및 스크립트
+ └─ tsconfig.json       # TypeScript 설정
+
+
+🎨 UI 및 스타일링
+
+- Google Geist Sans, Geist Mono 폰트 적용
+
+- 글로벌 CSS로 기본 스타일 관리
+
+- 컴포넌트 단위 재사용 가능한 UI 설계
+
+- 반응형 레이아웃 및 접근성 고려
+
+🚀 실행 방법
+
+1. 저장소 클론 및 의존성 설치
+
+git clone <레포지토리 URL>
+cd ms-farm-website
+npm install
+
+
+2. 개발 서버 실행
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 브라우저에서 http://localhost:3000 접속
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+📌 주요 구현 포인트
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 13 App Router 기반의 폴더 구조 활용으로 직관적 라우팅 구현
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 관리자 페이지 내 상세 기능별 폴더 구조 (분석, 주문, 고객, 상품) 분리
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 글로벌 레이아웃에 Google Geist 폰트 적용 및 antialiased 스타일 추가
 
-## Deploy on Vercel
+- 공통 컴포넌트(Header, Footer, Hero, ProductGrid 등)로 코드 재사용성 향상
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 미들웨어를 통한 인증/권한 관리 가능성 열어둠
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+📝 사용 목적
+
+본 프로젝트는 최신 Next.js 13 기반 쇼핑몰 프론트엔드 개발 경험과 관리 페이지 구현 역량을 증명하기 위해 제작되었습니다.
+실제 서비스 운영을 위한 구조 설계와 기능 구현에 중점을 두고 있습니다.
+
+---
+
+🙋‍♂️ 제작자 정보
+
+이름: 한민지
+
+GitHub: MinJiH01
+
+이메일: hmj4196@naver.com
+
+---
+
+✅ 향후 계획 및 개선 사항
+
+- API 연동 및 상태 관리 라이브러리(RTK, SWR 등) 도입
+
+- UI/UX 고도화 및 반응형 디자인 강화
+
+- 관리자 및 사용자 인증 기능 완성
+
+- 배포 자동화 및 CI/CD 구축
